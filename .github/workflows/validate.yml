@@ -1,6 +1,6 @@
 name: validate
 on:
-  workflow_call:
+  workflow_dispatch:
     secrets:
       ZRE_REPO_WITH_PAT:
         required: true

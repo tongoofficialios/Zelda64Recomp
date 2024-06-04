@@ -263,19 +263,19 @@ Gfx* Gfx_DrawRect_DropShadow(Gfx* gfx, s16 rectLeft, s16 rectTop, s16 rectWidth,
 
 int autosave_icon_counter = 0;
 
-#define AUTOSAVE_ICON_FADE_OUT_FRAMES 5
-#define AUTOSAVE_ICON_FADE_IN_FRAMES 5
-#define AUTOSAVE_ICON_SHOW_FRAMES 30
+#define AUTOSAVE_ICON_FADE_OUT_FRAMES 10
+#define AUTOSAVE_ICON_FADE_IN_FRAMES 10
+#define AUTOSAVE_ICON_SHOW_FRAMES 120
 #define AUTOSAVE_ICON_TOTAL_FRAMES (AUTOSAVE_ICON_FADE_IN_FRAMES + AUTOSAVE_ICON_SHOW_FRAMES + AUTOSAVE_ICON_FADE_OUT_FRAMES)
 
-#define AUTOSAVE_ICON_WIDTH 24
-#define AUTOSAVE_ICON_HEIGHT 16
+#define AUTOSAVE_ICON_WIDTH 48
+#define AUTOSAVE_ICON_HEIGHT 32
 #define AUTOSAVE_ICON_DRAW_WIDTH (AUTOSAVE_ICON_WIDTH * 3 / 4)
 #define AUTOSAVE_ICON_DRAW_HEIGHT (AUTOSAVE_ICON_HEIGHT * 3 / 4)
 #define AUTOSAVE_ICON_X (SCREEN_WIDTH - AUTOSAVE_ICON_DRAW_WIDTH - 4)
 #define AUTOSAVE_ICON_Y (SCREEN_HEIGHT - AUTOSAVE_ICON_DRAW_HEIGHT - 4)
 
-INCBIN(autosave_icon, "autosave.rgba32.bin");
+INCBIN(autosave_icon, "autosave.rgba32.bin"); // modify this file as needed to make it more visible
 
 Gfx* GfxEx_DrawRect_DropShadow(Gfx* gfx, s16 rectLeft, s16 rectTop, s16 rectWidth, s16 rectHeight, u16 dsdx, u16 dtdy,
                              s16 r, s16 g, s16 b, s16 a, u16 origin) {
